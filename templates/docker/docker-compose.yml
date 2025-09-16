@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  ${APP_NAME}:
+    image: ${IMAGE}:${TAG}
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - "${PORT}:${CONTAINER_PORT}"
+

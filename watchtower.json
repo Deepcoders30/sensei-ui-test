@@ -1,0 +1,25 @@
+{
+  "required": [
+    "docker",
+    "docker compose"
+  ],
+  "deploymentConfig": {
+    "script": {
+      "source": "deploy.sh",
+      "params": ["-p", "${env}"]
+    },
+    "profile": {
+      "debug": false,
+      "instanceConfig": {
+        "isolated": {
+          "name": "git-autosync",
+          "stages": ["build", "start", "stop", "restart", "cleanup"]
+        },
+        "limits": {
+          "cpu": 10,
+          "memory": 10
+        }
+      }
+    }
+  }
+}
