@@ -3,6 +3,8 @@ version: "3.8"
 services:
   ${APP_NAME}:
     image: ${IMAGE}:${TAG}
+    build:
+      context: .
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:

@@ -119,7 +119,6 @@ function start() {
       docker rm -f ${APP_NAME}
     fi
     [ "$(docker images -q "${APP_NAME}:${VERSION}")" ] && docker rmi "${APP_NAME}:${VERSION}"
-    generate_docker_config
     docker compose -f "${DOCKER_COMPOSE_FILE}" build --no-cache
     docker compose -f "${DOCKER_COMPOSE_FILE}" up -d
   elif [[ "${ACTION}" == "cleanup" ]]; then

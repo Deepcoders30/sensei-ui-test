@@ -1,0 +1,16 @@
+#########################################################################################################
+#  WARNING: AUTO-GENERATED CONFIG FOR sensei-ui-test default ENVIRONMENT BY deploy.sh. DO NOT TOUCH!!!  #
+#########################################################################################################
+
+version: "3.8"
+
+services:
+  sensei-ui-test:
+    image: ghcr.io/deepcoders30/sensei-ui-test:main
+    build:
+      context: .
+    container_name: sensei-ui
+    restart: unless-stopped
+    ports:
+      - "3001:80"
+
