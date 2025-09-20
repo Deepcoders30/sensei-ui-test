@@ -1,6 +1,6 @@
-#########################################################################################################
-#  WARNING: AUTO-GENERATED CONFIG FOR sensei-ui-test default ENVIRONMENT BY deploy.sh. DO NOT TOUCH!!!  #
-#########################################################################################################
+###############################################################################################################################################################################################################################################################################
+#  WARNING: AUTO-GENERATED CONFIG FOR sensei-ui-test default ENVIRONMENT BY deploy.sh. DO NOT TOUCHfunction generate_docker_config() {   generate_file_header docker-compose.default.yml;   envsubst <./templates/docker/docker-compose.yml >>docker-compose.default.yml; }!  #
+###############################################################################################################################################################################################################################################################################
 
 version: "3.8"
 
@@ -9,7 +9,7 @@ services:
     image: ghcr.io/deepcoders30/sensei-ui-test:main
     build:
       context: .
-    container_name: sensei-ui
+    container_name: sensei-ui-test
     restart: unless-stopped
     ports:
       - "3001:80"
